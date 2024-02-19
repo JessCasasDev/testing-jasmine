@@ -11,7 +11,8 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-coverage-istanbul-reporter')
+      require('karma-coverage-istanbul-reporter'),
+      require('karma-sonarqube-unit-reporter')
     ],
     client: {
       jasmine: {
@@ -47,7 +48,15 @@ module.exports = function (config) {
       reports: ['lcovonly'],
       fixWebpackSourcePaths: true
    },
-    reporters: ['progress', 'kjhtml', 'coverage-istanbul'],
+   sonarQubeUnitReporter: {
+    sonarQubeVersion: 'LATEST',
+    outputFile: 'reports/ut_report.xml',
+    overrideTestDescription: true,
+    testPaths: ['./src'],
+    testFilePattern: '.spec.ts',
+    useBrowserName: false
+  },
+    reporters: ['sonarqubeUnit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

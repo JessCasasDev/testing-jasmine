@@ -7,7 +7,7 @@ import { PadreComponent } from './padre.component';
 @Component({selector: 'app-hijo'})
 class HijoComponent{};
 
-xdescribe('PadreComponent', () => {
+describe('PadreComponent', () => {
   let component: PadreComponent;
   let fixture: ComponentFixture<PadreComponent>;
 

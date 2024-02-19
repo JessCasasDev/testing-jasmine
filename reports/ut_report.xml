@@ -1,0 +1,100 @@
+<testExecutions version="1">
+  <file path="src/app/prueba-pipe/prueba-pipe.pipe.spec.ts">
+    <testCase name="PruebaPipePipe Debería retornar  cuando se envia undefined" duration="1"/>
+    <testCase name="PruebaPipePipe Debería retornar  cuando se envia null" duration="1"/>
+    <testCase name="PruebaPipePipe create an instance" duration="1"/>
+    <testCase name="PruebaPipePipe Debería retornar  cuando se envia " duration="1"/>
+    <testCase name="PruebaPipePipe Debería retornar MINUSCULA cuando se envia minuscula" duration="1"/>
+    <testCase name="PruebaPipePipe Debería retornar MAYUSCULA cuando se envia MAYUSCULA" duration="1"/>
+  </file>
+  <file path="src/app/prueba-directiva/prueba-directiva.directive.spec.ts">
+    <testCase name="TestPruebaDirectivaComponent Probando la directiva Cuando hace hover in" duration="32"/>
+    <testCase name="TestPruebaDirectivaComponent Probando la directiva Cuando hace hover out" duration="3"/>
+  </file>
+  <file path="src/app/prueba-padre-hijo/padre/padre.component.spec.ts">
+    <testCase name="PadreComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="4"/>
+    <testCase name="AppComponent Debería tener titulo como 'testing-jasmine'" duration="2"/>
+    <testCase name="AppComponent Debería renderiza el titulo" duration="1"/>
+    <testCase name="AppComponent Debería mostrar otro titulo despues de hacer click en el boton" duration="2"/>
+  </file>
+  <file path="src/app/pruebas-basicas/pruebas-basicas.component.spec.ts">
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta la funcion condicional Debería llamar la funcion del servicio con un espia" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta la funcion condicional Debería ejecutar la funcion del servicio sin mock" duration="3"/>
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta la funcion condicional Debería llamar la funcion del servicio con mock" duration="1">
+      <skipped message="Skipped"/>
+    </testCase>
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta la funcion double Debería mostrar el resultado positivo de un número positivo elevado al cuadrado" duration="2"/>
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta la funcion double Debería mostrar el resultado positivo de un número negativo elevado al cuadrado" duration="1"/>
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta la funcion double Debería retornar 0 cuando el valor enviado es 0" duration="2"/>
+    <testCase name="PruebasBasicasComponent Cuando se ejecuta excepcion Debería lanzar una excepcion" duration="1"/>
+    <testCase name="PruebasBasicasComponent should create" duration="1"/>
+  </file>
+  <file path="src/app/prueba-directiva/prueba-directiva.directive.spec.ts">
+    <testCase name="PruebaDirectivaDirective should create an instance" duration="1"/>
+  </file>
+  <file path="src/app/services/simple-service.spec.ts">
+    <testCase name="SimpleService Cuando hay una promesa Debería usar done" duration="2"/>
+    <testCase name="SimpleService Debería validar el condicional Debería validar que retorne 'Positivo' si el número Infinito" duration="1"/>
+    <testCase name="SimpleService Debería validar el condicional Debería validar que retorne 'Cero' si el número es 0" duration="1"/>
+    <testCase name="SimpleService Debería validar el condicional Debería validar que retorne 'Negativo' si el número es menor a 0" duration="1"/>
+    <testCase name="SimpleService Debería validar el condicional Debería validar que retorne 'Positivo' si el número es mayor a 0" duration="1"/>
+    <testCase name="SimpleService Debería validar el condicional Debería validar que retorne 'Negativo' si el número -Infinito" duration="1"/>
+    <testCase name="SimpleService Cuando hay una operacion asyncrona Debería validarse el paso del tiempo" duration="3"/>
+  </file>
+  <file path="src/app/prueba-observables/prueba-observables.component.spec.ts">
+    <testCase name="PruebaObservablesComponent should create" duration="6"/>
+    <testCase name="PruebaObservablesComponent ObservableComplejo con subscribe" duration="4"/>
+    <testCase name="PruebaObservablesComponent ObservableComplejo con fakeAsync" duration="2"/>
+    <testCase name="PruebaObservablesComponent ObservableComplejo con subscribe y done" duration="1011">
+      <failure message="Error">Error: Expected false to equal true.
+    at &lt;Jasmine&gt;
+    at SafeSubscriber._next (src/app/prueba-observables/prueba-observables.component.spec.ts:138:23)
+    at SafeSubscriber.__tryOrUnsub (node_modules/rxjs/_esm2015/internal/Subscriber.js:183:1)
+    at SafeSubscriber.next (node_modules/rxjs/_esm2015/internal/Subscriber.js:122:1)
+</failure>
+    </testCase>
+    <testCase name="PruebaObservablesComponent obtenerInformacion Debería asignar los datos correctos" duration="61">
+      <failure message="Error">Error: Expected spy ApiService.getData to have been called once. It was called 4 times.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/prueba-observables/prueba-observables.component.spec.ts:70:34)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+    <testCase name="PruebaObservablesComponent obtenerInformacion Debería mostrar error si hay un error en la peticion" duration="3"/>
+    <testCase name="PruebaObservablesComponent Enviar informacion Debería enviar la informacion adecuada" duration="3"/>
+    <testCase name="PruebaObservablesComponent observableSimple con subscribe y done" duration="1014"/>
+    <testCase name="PruebaObservablesComponent observableSimple con subscribe" duration="2"/>
+    <testCase name="PruebaObservablesComponent observableSimple con fakeAsync" duration="1"/>
+    <testCase name="PruebaObservablesComponent observableSimple Probar subscripcion con subscribe" duration="2">
+      <failure message="Error">Error: Expected undefined to equal [ 1, 2, 3, 4 ].
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/prueba-observables/prueba-observables.component.spec.ts:116:33)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+    <testCase name="PruebaObservablesComponent observableSimple Probar subscripcion con fakeAsync" duration="1"/>
+  </file>
+  <file path="src/app/prueba-padre-hijo/hijo/hijo.component.spec.ts">
+    <testCase name="HijoComponent Debería enviar la informacion adecuada Debería validar que el nombre es requerido" duration="7"/>
+    <testCase name="HijoComponent Debería enviar la informacion adecuada Debería validar que el nombre debe tener 3 caracteres" duration="3"/>
+    <testCase name="HijoComponent Debería enviar la informacion del formulario No debería enviar la informacion si el formulario no es valido" duration="1"/>
+    <testCase name="HijoComponent Debería enviar la informacion del formulario Debería enviar la informacion del formulario si esta valido" duration="1"/>
+    <testCase name="HijoComponent Validar boton deshabilitado mediante el input Debería permitir hacer click si el input esta habilitado" duration="2"/>
+    <testCase name="HijoComponent Validar boton deshabilitado mediante el input No debería permitir hacer click si el input esta deshabilitado" duration="1"/>
+    <testCase name="HijoComponent should create" duration="1"/>
+  </file>
+  <file path="src/app/services/api.service.spec.ts">
+    <testCase name="ApiService Pruebas HTTP_CLIENT ERROR get error" duration="2"/>
+    <testCase name="ApiService Pruebas HTTP_CLIENT GET getData" duration="2"/>
+    <testCase name="ApiService Pruebas HTTP_CLIENT GET getData" duration="1"/>
+    <testCase name="ApiService Pruebas HTTP_CLIENT POST Enviar datos" duration="1"/>
+    <testCase name="ApiService should be created" duration="1"/>
+  </file>
+</testExecutions>

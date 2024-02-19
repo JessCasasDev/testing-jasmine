@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { PruebaDirectivaDirective } from './prueba-directiva.directive';
 
-xdescribe('PruebaDirectivaDirective', () => {
+describe('PruebaDirectivaDirective', () => {
   it('should create an instance', () => {
     const directive = new PruebaDirectivaDirective();
     expect(directive).toBeTruthy();

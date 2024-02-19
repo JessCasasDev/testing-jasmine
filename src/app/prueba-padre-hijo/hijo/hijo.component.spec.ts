@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 
 import { HijoComponent } from './hijo.component';
 
-xdescribe('HijoComponent', () => {
+describe('HijoComponent', () => {
   let component: HijoComponent;
   let fixture: ComponentFixture<HijoComponent>;
 

@@ -10,7 +10,7 @@ import { ApiService } from '../services/api.service';
 
 import { PruebaObservablesComponent } from './prueba-observables.component';
 
-xdescribe('PruebaObservablesComponent', () => {
+describe('PruebaObservablesComponent', () => {
   let component: PruebaObservablesComponent;
   let fixture: ComponentFixture<PruebaObservablesComponent>;
   const serviceSpy = jasmine.createSpyObj<ApiService>('ApiService', [
