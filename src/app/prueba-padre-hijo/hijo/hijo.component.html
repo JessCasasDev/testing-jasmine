@@ -1,0 +1,14 @@
+<form formGroupName="formulario">
+  <input formControlName="nombre" />
+  <span *ngIf="nombre?.errors?.min"
+    >El nombre necesita tener {{ nombre.errors?.min.min }} caracteres</span
+  >
+  <input formControlName="apellido" />
+  <button
+    [disabled]="!habilitado"
+    (click)="enviaDatos()"
+    type="submit"
+  >
+    Envia
+  </button>
+</form>

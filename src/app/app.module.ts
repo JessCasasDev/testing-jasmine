@@ -1,18 +1,26 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PruebasBasicasComponent } from './pruebas-basicas/pruebas-basicas.component';
+import { PadreComponent } from './prueba-padre-hijo/padre/padre.component';
+import { HijoComponent } from './prueba-padre-hijo/hijo/hijo.component';
+import { PruebaObservablesComponent } from './prueba-observables/prueba-observables.component';
+import { PruebaDirectivaDirective } from './prueba-directiva/prueba-directiva.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PruebasBasicasComponent,
+    PadreComponent,
+    HijoComponent,
+    PruebaObservablesComponent,
+    PruebaDirectivaDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
