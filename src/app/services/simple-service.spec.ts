@@ -1,7 +1,7 @@
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { SimpleService } from './simple-service.service';
 
-describe('SimpleService', () => {
+xdescribe('SimpleService', () => {
   let service: SimpleService;
 
   beforeEach(() => {

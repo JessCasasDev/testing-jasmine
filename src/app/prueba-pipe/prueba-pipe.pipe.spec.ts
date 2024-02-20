@@ -5,7 +5,7 @@ describe('PruebaPipePipe', () => {
     const pipe = new PruebaPipePipe();
     expect(pipe).toBeTruthy();
   });
-
+  
   const tests = [
     {
       prueba: 'minuscula',
@@ -16,7 +16,7 @@ describe('PruebaPipePipe', () => {
     { prueba: null, esperado: '' },
     { prueba: '', esperado: '' },
   ];
-
+  
   tests.forEach((test) => {
     it(`Debería retornar ${test.esperado} cuando se envia ${test.prueba}`, () => {
       const pipe = new PruebaPipePipe();

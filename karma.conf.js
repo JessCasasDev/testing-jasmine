@@ -3,16 +3,14 @@
 
 module.exports = function (config) {
   config.set({
-    basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    basePath: "",
+    frameworks: ["jasmine", "@angular-devkit/build-angular"],
     plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-coverage-istanbul-reporter'),
-      require('karma-sonarqube-unit-reporter')
+      require("karma-jasmine"),
+      require("karma-chrome-launcher"),
+      require("karma-jasmine-html-reporter"),
+      require("karma-coverage"),
+      require("@angular-devkit/build-angular/plugins/karma")
     ],
     client: {
       jasmine: {
@@ -21,18 +19,18 @@ module.exports = function (config) {
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
       },
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     jasmineHtmlReporter: {
-      suppressAll: true // removes the duplicated traces
+      suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/testing-jasmine'),
-      subdir: '.',
+      dir: require("path").join(__dirname, "./coverage/testing-jasmine"),
+      subdir: ".",
       reporters: [
-        { type: 'html' },
-        { type: 'text-summary' },
-        { type: 'lcov', subdir: 'lcov-report' }
+        { type: "html" },
+        { type: "text-summary" },
+        { type: "lcov", subdir: "lcov-report" },
       ],
       check: {
         global: {
@@ -41,24 +39,21 @@ module.exports = function (config) {
           functions: 80,
           lines: 80,
         },
-      }
+      },
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'ChromeHeadless'],
-    customLanunchers: {
-      ChromeHeadless: {
-        base: 'ChromeHeadless',
-        flags: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox'
-        ]
-      }
+    browsers: ["Chrome"],
+    customLaunchers: {
+      ChromeHeadless1: {
+        base: "ChromeHeadless",
+        flags: ["--no-sandbox", "--disable-setuid-sandbox"],
+      },
     },
     singleRun: true,
-    restartOnFileChange: true
+    restartOnFileChange: true,
   });
 };

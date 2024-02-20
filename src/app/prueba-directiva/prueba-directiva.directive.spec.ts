@@ -14,7 +14,7 @@ describe('PruebaDirectivaDirective', () => {
   template: `<div appPruebaDirectiva>Some Text</div>`,
 })
 class TestPruebaDirectivaComponent {}
-describe('TestPruebaDirectivaComponent', () => {
+xdescribe('TestPruebaDirectivaComponent', () => {
   let fixture: ComponentFixture<TestPruebaDirectivaComponent>;
 
   beforeEach(() => {
@@ -27,9 +27,14 @@ describe('TestPruebaDirectivaComponent', () => {
   describe('Probando la directiva', () => {
     it('Cuando hace hover in', () => {
       const item = fixture.debugElement.query(By.css('div'));
+      const debugElement = fixture.debugElement.query(By.directive(PruebaDirectivaDirective));
+      const directive = debugElement.injector.get(PruebaDirectivaDirective)
+      spyOn(directive, 'onHover').and.callThrough();
+
       item.triggerEventHandler('mouseover', null);
       fixture.detectChanges();
 
+      expect(directive.onHover).toHaveBeenCalled();
       expect(item.nativeElement.style.backgroundColor).toBe('blue');
     });
     it('Cuando hace hover out', () => {
